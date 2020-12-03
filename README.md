@@ -1,15 +1,14 @@
 # Assignment 21
 
-The GC-content of a DNA string is given by the percentage of nucleobases in the string that are 'C' or 'G'. For example, the GC-content of "AGCTATAG" is 37.5% because 3 of the 8 nucleobases in the DNA string are 'C' or 'G' (3 / 8 = 0.375). 
+There are several techniques for implementing the sqrt method in the `Math` class. One such technique is known as the Babylonian method. It approximates the square root of a number, n, by repeatedly performing a calculation using the following formula:
 
-Write a method that returns the GC-content percentage of a given DNA string.
+`nextGuess = (lastGuess + n / lastGuess) / 2`
 
-### Sample Outputs
+When `nextGuess` and `lastGuess` are almost identical, `nextGuess` is the approximated square root. The initial guess can be any positive value (e.g., 1). This value will be the starting value for `lastGuess`. If the difference between `nextGuess` and `lastGuess` is less than a very small number, such as 0.0001, you can claim that `nextGuess` is the approximated square root of n. If not, `nextGuess` becomes `lastGuess` and the approximation process continues.
 
-```
-gcContent("CCACCCTCGTGGTATGGCTAGGCATTCA") -> 57.142857142857146
-gcContent("TAGCCAGAACCGTTTCTCTGA") -> 47.61904761904762
-```
+## Specifications
+
+Write the `babSqrt(int n)` method. One class is fine.
 
 ### Grading
 
